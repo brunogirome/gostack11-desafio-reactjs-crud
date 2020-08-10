@@ -5,12 +5,17 @@ interface IFoodPlateProps {
 }
 
 export const Container = styled.div<IFoodPlateProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #f0f0f5;
   border-radius: 8px;
+  width: 352px;
 
   header {
     background: #ffb84d;
     border-radius: 8px 8px 0px 0px;
+    width: inherit;
     height: 192px;
     overflow: hidden;
     transition: 0.3s opacity;
@@ -25,6 +30,9 @@ export const Container = styled.div<IFoodPlateProps>`
     img {
       pointer-events: none;
       user-select: none;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
     }
   }
 
@@ -39,6 +47,15 @@ export const Container = styled.div<IFoodPlateProps>`
       color: #3d3d4d;
 
       margin-top: 16px;
+      line-height: 24px;
+
+      height: 48px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
 
     .price {
